@@ -1,13 +1,13 @@
 {
   "functions": {
-    "App/main.py": {
+    "app/main.py": {
       "runtime": "vercel-python@3.0.0"
     }
   },
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "App/main.py"
+      "dest": "app/main.py"
     }
   ]
 }
