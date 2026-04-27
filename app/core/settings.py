@@ -71,7 +71,7 @@ def _load_settings() -> Settings:
     return Settings(
         groq_api_key=(os.getenv("GROQ_API_KEY") or "").strip() or None,
         cors_origins=os.getenv("CORS_ORIGINS", "*").strip() or "*",
-        log_file=os.getenv("LOG_FILE", "logs/app.log").strip() or "logs/app.log",
+        log_file=os.getenv("LOG_FILE", "/tmp/app.log").strip() or "logs/app.log",
         log_level=(os.getenv("LOG_LEVEL", "INFO").strip().upper() or "INFO"),
         log_include_pid=_env_bool("LOG_INCLUDE_PID", False),
         max_input_chars=_env_int("MAX_INPUT_CHARS", 1000, min_v=20, max_v=200_000),
